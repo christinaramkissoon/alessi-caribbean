@@ -1,4 +1,4 @@
-/* Fonts */
+/* Fonts & Base */
 body {
   font-family: 'Lato', sans-serif;
   background-color: #F5F5F5;
@@ -35,29 +35,85 @@ section {
   transform: scale(1.05);
 }
 
-/* Features / Services */
-.services ul, .why ul {
-  list-style: none;
-  padding: 0;
-}
-.services li, .why li {
-  margin: 0.5rem 0;
-  font-weight: bold;
+/* About */
+.about img {
+  max-width: 300px;
+  border-radius: 8px;
+  margin: 1rem auto;
+  display: block;
 }
 
-/* Gallery */
+/* Services Grid */
+.service-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.service-grid div {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 250px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.service-grid div:hover {
+  transform: translateY(-5px);
+}
+.service-grid img {
+  max-width: 100%;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+/* Products */
+.products img {
+  max-width: 300px;
+  margin: 1rem auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Gallery Grid */
 .gallery-grid {
   display: flex;
   justify-content: center;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 .gallery-grid img {
   width: 30%;
+  min-width: 200px;
   border-radius: 8px;
   transition: transform 0.3s ease;
 }
 .gallery-grid img:hover {
   transform: scale(1.05);
+}
+
+/* Why Choose Us Grid */
+.why-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.why-grid div {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 250px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.why-grid div:hover {
+  transform: translateY(-5px);
+}
+.why-grid img {
+  max-width: 100%;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
 }
 
 /* Contact Form */
@@ -66,7 +122,7 @@ form {
   flex-direction: column;
   gap: 1rem;
   max-width: 400px;
-  margin: 0 auto;
+  margin: 2rem auto;
 }
 input, textarea {
   padding: 0.75rem;
@@ -80,6 +136,7 @@ button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-weight: bold;
 }
 button:hover {
   background-color: #333;
