@@ -38,8 +38,8 @@
 
   <!-- About Us -->
   <section id="about" class="about container" data-aos="fade-up">
-    <h2>Who We Are</h2>
-    <p>Alessi Caribbean is the exclusive distributor of stucco finishes in the Caribbean. Based proudly in Trinidad & Tobago, we bring premium quality finishes designed for tropical conditions.</p>
+    <h2 data-aos="fade-right">Who We Are</h2>
+    <p data-aos="fade-left" data-aos-delay="200">Alessi Caribbean is the exclusive distributor of stucco finishes in the Caribbean. Based proudly in Trinidad & Tobago, we bring premium quality finishes designed for tropical conditions.</p>
   </section>
 
   <!-- Stucco Finishes -->
@@ -87,12 +87,27 @@
       </div>
     </div>
 
-    <!-- Testimonials -->
+    <!-- Testimonials Slider -->
     <div class="testimonials" data-aos="fade-up">
       <h3>What Our Customers Say</h3>
-      <blockquote>"The Fine Swirl finish gave our home a modern, elegant look. Highly recommend!"</blockquote>
-      <blockquote>"Coarse Stucco is tough and beautiful — perfect for Caribbean weather."</blockquote>
-      <blockquote>"Alessi Caribbean delivers quality and professionalism every time."</blockquote>
+      <div class="testimonial-slider">
+        <div class="slide active">
+          <blockquote>"The Fine Swirl finish gave our home a modern, elegant look. Highly recommend!"</blockquote>
+          <p>- Happy Client</p>
+        </div>
+        <div class="slide">
+          <blockquote>"Coarse Stucco is tough and beautiful — perfect for Caribbean weather."</blockquote>
+          <p>- Happy Client</p>
+        </div>
+        <div class="slide">
+          <blockquote>"Alessi Caribbean delivers quality and professionalism every time."</blockquote>
+          <p>- Happy Client</p>
+        </div>
+      </div>
+      <div class="slider-controls">
+        <span class="prev">&#10094;</span>
+        <span class="next">&#10095;</span>
+      </div>
     </div>
   </section>
 
@@ -130,7 +145,7 @@
     <p>Based in Trinidad & Tobago | Alessi Caribbean</p>
   </footer>
 
-  <!-- AOS Init -->
+  <!-- JS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({
@@ -159,6 +174,33 @@
         }
       });
     });
+
+    // Testimonial Slider
+    const slides = document.querySelectorAll(".testimonial-slider .slide");
+    const prev = document.querySelector(".slider-controls .prev");
+    const next = document.querySelector(".slider-controls .next");
+    let index = 0;
+
+    function showSlide(i) {
+      slides.forEach(slide => slide.classList.remove("active"));
+      slides[i].classList.add("active");
+    }
+
+    prev.addEventListener("click", () => {
+      index = (index === 0) ? slides.length - 1 : index - 1;
+      showSlide(index);
+    });
+
+    next.addEventListener("click", () => {
+      index = (index === slides.length - 1) ? 0 : index + 1;
+      showSlide(index);
+    });
+
+    // Auto-slide every 5 seconds
+    setInterval(() => {
+      index = (index === slides.length - 1) ? 0 : index + 1;
+      showSlide(index);
+    }, 5000);
   </script>
 </body>
 </html>
