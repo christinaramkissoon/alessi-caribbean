@@ -20,7 +20,7 @@
     <ul>
       <li><a href="#hero" class="active">Home</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="#services">Finishes</a></li>
+      <li><a href="#finishes">Finishes</a></li>
       <li><a href="#gallery">Gallery</a></li>
       <li><a href="#why">Why Trust Us</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -30,28 +30,28 @@
   <!-- Hero Section -->
   <section id="hero" class="hero" data-aos="fade-in">
     <div class="hero-overlay">
-      <h2>Exclusive Alessi Stucco Finishes</h2>
-      <p>Fine Swirl & Coarse Stucco — built for Caribbean durability</p>
-      <a href="#services" class="btn">Discover Our Finishes</a>
+      <h2 data-aos="fade-up">Exclusive Stucco Finishes</h2>
+      <p data-aos="fade-up" data-aos-delay="200">Fine Swirl & Coarse Stucco — built for Caribbean durability</p>
+      <a href="#finishes" class="btn" data-aos="zoom-in" data-aos-delay="400">Discover Our Finishes</a>
     </div>
   </section>
 
   <!-- About Us -->
   <section id="about" class="about container" data-aos="fade-up">
     <h2>Who We Are</h2>
-    <p>Alessi Caribbean is the exclusive distributor of Tintas Alessi stucco finishes in the Caribbean. Based proudly in Trinidad & Tobago, we bring premium quality finishes designed for tropical conditions.</p>
+    <p>Alessi Caribbean is the exclusive distributor of stucco finishes in the Caribbean. Based proudly in Trinidad & Tobago, we bring premium quality finishes designed for tropical conditions.</p>
   </section>
 
   <!-- Stucco Finishes -->
-  <section id="services" class="services container" data-aos="fade-right">
+  <section id="finishes" class="services container" data-aos="fade-right">
     <h2>Our Stucco Finishes</h2>
     <div class="service-grid">
-      <div>
+      <div data-aos="flip-left">
         <img src="images/placeholder-fineswirl.jpg" alt="Fine Swirl Stucco" />
         <h3>Fine Swirl</h3>
         <p>Elegant textured finish perfect for interiors and exteriors.</p>
       </div>
-      <div>
+      <div data-aos="flip-right" data-aos-delay="200">
         <img src="images/placeholder-coarse.jpg" alt="Coarse Stucco" />
         <h3>Coarse Stucco</h3>
         <p>Durable coarse finish built for strength and style.</p>
@@ -63,9 +63,9 @@
   <section id="gallery" class="gallery container" data-aos="zoom-in">
     <h2>Our Work</h2>
     <div class="gallery-grid">
-      <img src="images/placeholder-project1.jpg" alt="Stucco Project 1" />
-      <img src="images/placeholder-project2.jpg" alt="Stucco Project 2" />
-      <img src="images/placeholder-project3.jpg" alt="Stucco Project 3" />
+      <img src="images/placeholder-project1.jpg" alt="Stucco Project 1" data-aos="zoom-in" />
+      <img src="images/placeholder-project2.jpg" alt="Stucco Project 2" data-aos="zoom-in" data-aos-delay="200" />
+      <img src="images/placeholder-project3.jpg" alt="Stucco Project 3" data-aos="zoom-in" data-aos-delay="400" />
     </div>
   </section>
 
@@ -73,15 +73,15 @@
   <section id="why" class="why container" data-aos="flip-up">
     <h2>Why Trust Us</h2>
     <div class="why-grid">
-      <div>
+      <div data-aos="fade-up">
         <img src="images/placeholder-quality.jpg" alt="Quality Badge" />
         <p>Exclusive distributor in the Caribbean</p>
       </div>
-      <div>
+      <div data-aos="fade-up" data-aos-delay="200">
         <img src="images/placeholder-local.jpg" alt="Local Landmark" />
         <p>Premium finishes for tropical conditions</p>
       </div>
-      <div>
+      <div data-aos="fade-up" data-aos-delay="400">
         <img src="images/placeholder-office.jpg" alt="Office Workspace" />
         <p>Trusted by builders and homeowners</p>
       </div>
@@ -90,15 +90,9 @@
     <!-- Testimonials -->
     <div class="testimonials" data-aos="fade-up">
       <h3>What Our Customers Say</h3>
-      <blockquote>
-        "The Fine Swirl finish gave our home a modern, elegant look. Highly recommend!"
-      </blockquote>
-      <blockquote>
-        "Coarse Stucco is tough and beautiful — perfect for Caribbean weather."
-      </blockquote>
-      <blockquote>
-        "Alessi Caribbean delivers quality and professionalism every time."
-      </blockquote>
+      <blockquote>"The Fine Swirl finish gave our home a modern, elegant look. Highly recommend!"</blockquote>
+      <blockquote>"Coarse Stucco is tough and beautiful — perfect for Caribbean weather."</blockquote>
+      <blockquote>"Alessi Caribbean delivers quality and professionalism every time."</blockquote>
     </div>
   </section>
 
@@ -107,17 +101,17 @@
     <h2>Let’s Build Together</h2>
     <div class="contact-card">
       <!-- Left side: info/map -->
-      <div class="contact-info">
+      <div class="contact-info" data-aos="fade-right">
         <img src="images/placeholder-map.jpg" alt="Map of Trinidad & Tobago" />
         <p><strong>Alessi Caribbean</strong><br>
-        Exclusive Distributor of Tintas Alessi Stucco Finishes<br>
+        Exclusive Stucco Finishes<br>
         Based in Trinidad & Tobago</p>
         <p><strong>Email:</strong> info@alessicaribbean.com<br>
         <strong>Phone:</strong> +1 (868) 123-4567</p>
       </div>
 
       <!-- Right side: form -->
-      <form>
+      <form data-aos="fade-left">
         <label for="name">Your Name</label>
         <input id="name" type="text" placeholder="Enter your name" required />
 
@@ -135,9 +129,6 @@
   <footer>
     <p>Based in Trinidad & Tobago | Alessi Caribbean</p>
   </footer>
-
-  <!-- JS -->
-  <script src="js/script.js"></script>
 
   <!-- AOS Init -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
