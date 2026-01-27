@@ -1,11 +1,17 @@
+/* Fonts */
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Lato', sans-serif;
   background-color: #F5F5F5;
   color: #333;
   margin: 0;
   padding: 0;
 }
 
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Header */
 header {
   background-color: #8B0000; /* Deep Red */
   color: white;
@@ -13,30 +19,73 @@ header {
   padding: 2rem;
 }
 
-.hero {
+/* Sections */
+section {
+  padding: 4rem 2rem;
   text-align: center;
-  padding: 2rem;
 }
 
-.features {
+/* Hero */
+.hero img {
+  max-width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.hero img:hover {
+  transform: scale(1.05);
+}
+
+/* Features / Services */
+.services ul, .why ul {
+  list-style: none;
+  padding: 0;
+}
+.services li, .why li {
+  margin: 0.5rem 0;
+  font-weight: bold;
+}
+
+/* Gallery */
+.gallery-grid {
   display: flex;
-  justify-content: space-around;
-  padding: 2rem;
+  justify-content: center;
+  gap: 1rem;
 }
-
-.feature-box {
-  background-color: #fff;
-  padding: 1rem;
-  border: 1px solid #ccc;
+.gallery-grid img {
   width: 30%;
-  text-align: center;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.gallery-grid img:hover {
+  transform: scale(1.05);
 }
 
-.products {
-  text-align: center;
-  padding: 2rem;
+/* Contact Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+input, textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+button {
+  background-color: #8B0000;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #333;
 }
 
+/* Footer */
 footer {
   background-color: #333;
   color: white;
