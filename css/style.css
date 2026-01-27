@@ -7,7 +7,7 @@ body {
 }
 
 header {
-  background-color: #8B0000;
+  background-color: #8B0000; /* Deep Red */
   color: white;
   text-align: center;
   padding: 2rem;
@@ -43,4 +43,3 @@ footer {
   text-align: center;
   padding: 1rem;
 }
-
