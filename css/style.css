@@ -1,21 +1,40 @@
-/* Fonts & Base */
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonts & Colors */
 body {
   font-family: 'Lato', sans-serif;
   background-color: #F5F5F5;
   color: #333;
-  margin: 0;
-  padding: 0;
+  line-height: 1.6;
 }
 
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
+  color: #111;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #8B0000; /* Brand red */
+}
+
+p {
+  font-size: 1rem;
+  max-width: 700px;
+  margin: 0 auto 2rem;
 }
 
 /* Container */
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 6rem 2rem;
 }
 
 /* Navigation */
@@ -31,7 +50,6 @@ nav ul {
   display: flex;
   justify-content: center;
   list-style: none;
-  margin: 0;
   padding: 1rem;
 }
 nav ul li {
@@ -60,3 +78,174 @@ nav ul li a.active {
   color: white;
 }
 .hero-overlay {
+  background: rgba(0,0,0,0.6);
+  padding: 3rem;
+  text-align: center;
+  border-radius: 8px;
+}
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+.btn {
+  background-color: #8B0000;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+.btn:hover {
+  background-color: #333;
+}
+
+/* Services / Finishes */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+.service-grid div {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 2rem;
+  text-align: center;
+}
+.service-grid img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+.service-grid h3 {
+  margin-bottom: 0.5rem;
+  color: #8B0000;
+}
+
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.gallery-grid img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Why Trust Us */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+.why-grid div {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 2rem;
+  text-align: center;
+}
+.why-grid img {
+  max-width: 80px;
+  margin-bottom: 1rem;
+}
+.testimonials {
+  margin-top: 3rem;
+}
+.testimonials h3 {
+  margin-bottom: 1.5rem;
+}
+.testimonials blockquote {
+  background: #fff;
+  border-left: 4px solid #8B0000;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Contact Card */
+.contact-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.contact-info {
+  flex: 1;
+  min-width: 250px;
+}
+.contact-info img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+.contact-info p {
+  margin-bottom: 1rem;
+}
+.contact-card form {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact-card label {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+.contact-card input,
+.contact-card textarea {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+.contact-card textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+.contact-card button {
+  background-color: #8B0000;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+.contact-card button:hover {
+  background-color: #333;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 4rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-card {
+    flex-direction: column;
+  }
+  .hero h2 {
+    font-size: 2rem;
+  }
+}
