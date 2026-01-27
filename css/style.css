@@ -11,19 +11,42 @@ h1, h2, h3 {
   font-family: 'Playfair Display', serif;
 }
 
-/* Container for consistent width */
+/* Container */
 .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 2rem;
 }
 
-/* Header */
-header {
-  background-color: #8B0000; /* Deep Red */
-  color: white;
-  text-align: center;
-  padding: 2rem;
+/* Navigation */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 1rem;
+}
+nav ul li {
+  margin: 0 1rem;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 0.5rem;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+nav ul li a.active {
+  color: #8B0000;
+  border-bottom: 2px solid #8B0000;
 }
 
 /* Hero Section */
@@ -35,100 +58,21 @@ header {
   align-items: center;
   justify-content: center;
   color: white;
-  overflow: hidden;
 }
-
 .hero-overlay {
   background: rgba(0,0,0,0.6);
   padding: 2rem;
   text-align: center;
   border-radius: 8px;
-  animation: fadeIn 2s ease-in-out;
 }
-
 .hero h2 {
   font-size: 3rem;
   margin-bottom: 1rem;
 }
-
 .hero p {
   font-size: 1.5rem;
   margin-bottom: 2rem;
 }
-
 .btn {
   background-color: #8B0000;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: background 0.3s ease;
-  font-weight: bold;
-}
-.btn:hover {
-  background-color: #333;
-}
-
-/* Custom fade-in animation */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Sections */
-section {
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-/* About */
-.about img {
-  max-width: 300px;
-  border-radius: 8px;
-  margin: 1rem auto;
-  display: block;
-}
-
-/* Services Grid */
-.service-grid {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-.service-grid div {
-  background: #fff;
-  padding: 1rem;
-  border-radius: 8px;
-  width: 250px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-.service-grid div:hover {
-  transform: translateY(-5px);
-}
-.service-grid img {
-  max-width: 100%;
-  border-radius: 6px;
-  margin-bottom: 0.5rem;
-}
-
-/* Products */
-.products img {
-  max-width: 300px;
-  margin: 1rem auto;
-  display: block;
-  border-radius: 8px;
-}
-
-/* Gallery Grid */
-.gallery-grid {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-.gallery-grid img {
-  width: 30%;
-  min-width: 200px;
-  border-radius: 8px;
+  color:
