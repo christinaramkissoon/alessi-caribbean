@@ -1,1 +1,46 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #F5F5F5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #8B0000;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero {
+  text-align: center;
+  padding: 2rem;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+}
+
+.feature-box {
+  background-color: #fff;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  width: 30%;
+  text-align: center;
+}
+
+.products {
+  text-align: center;
+  padding: 2rem;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
 
